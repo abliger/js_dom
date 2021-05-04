@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <html></html>
+    <body id="body">
+        <h1 id="h1_id">dom导航</h1>
+        <div>
+            <p>this is a p</p>
+            <div id="add">
+                <a id="a" href="http://www.baidu.com">this is an a</a>
+                <div id="delete">
+                    <p>test</p>
+                    <p>test</p>
+                    <p>test</p>
+                    <p>test</p>
+                    <p>test</p>
+                    <p>test</p>
+                    <p>test</p>
+                    <p>test</p>
+                    <p>test</p>
+                </div>
+            </div>
+        </div>
+        <script>
+            // 删除指定元素
+           document.getElementById('delete').remove()
+           // 创建指定元素
+           let dom=document.createElement('p')
+           let node=dom.innerText='test'
+           console.log(dom);
+           console.log(node);
+           // 把指定元素添加到 div 标签中
+           document.getElementById("add").append(dom)
+           let new_dom=document.createElement("p")
+           let text=document.createTextNode("this is a new p")
+           new_dom.appendChild(text)
+           // 把new_dom插入到 add id标签里的 a id 标签 之前
+           document.getElementById("add").insertBefore(new_dom,document.getElementById("a"))
+        </script>
+    </body>
+</html>

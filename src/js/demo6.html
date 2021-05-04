@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <html></html>
+    <body>
+        <h1 onclick="this.innerText='click'">点击事件</h1>
+        <h1 onclick="my_click(this)">点击事件</h1>
+        <h1 id="h1_id3">点击事件</h1>
+        <h1 id="h1_id3" onmousemove="this.innerText='test'">点击事件</h1>
+        <input type="text" onchange="my_change(this)"/>
+        <div onmouseout="this.innerText='out'"
+           onmouseover="this.innerText='over'">this is a div</div>
+        <p onmousedown="this.innerText='down'" onmouseup="this.innerText='up'">this is a p</p>
+        <input type="text" onfocus="myFunction(this)" onblur="this.value='blur'">
+        <script>
+            document.getElementById("h1_id3").onclick=function(){
+                this.innerText='byId'
+            }
+            let i=0
+            function my_click(param) {
+                if(i++%2===0){
+                    param.innerText='click'
+                }else{
+                    param.innerText='点击事件'
+                }
+            }
+            function my_change(param){
+                console.log(param.value)
+            }
+            function myFunction(x) {
+            x.style.background = "yellow";
+            }
+        </script>
+    </body>
+</html>

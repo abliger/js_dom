@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <html></html>
+    <body id="body">
+        <h1 id="h1_id">dom导航</h1>
+        <div>
+            <p>this is a p</p>
+            <div>
+                <a href="http://www.baidu.com">this is an a</a>
+            </div>
+        </div>
+        <script>
+            console.log(document.getElementById("body").childNodes)
+            console.log(document.getElementById("body").childNodes[1])
+            // 找到 this is a p 的p标签
+            console.log(document.getElementById("h1_id").nextSibling.nextSibling.getElementsByTagName('p'))
+        </script>
+    </body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "dom_operation",
+  "version": "1.0.0",
+  "description": "此项目展示原生js的dom操作",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "js",
+    "dom"
+  ],
+  "author": "abliger",
+  "license": "ISC"
+}

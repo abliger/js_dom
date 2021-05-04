@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html >
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>体验JavaScript语言</title>
+	</head>
+	<body>
+		<h1 id="h1_id">体验JavaScript语言</h1>
+		<div class="div_class">javascript</div>
+		<h2 id="h2_id1" class="h2_class">javascript 操作dom</h2>
+		<h3 id="h3_id1" class="h3_class"><b>windos</b></h2>
+		<h3 id="h3_id2" class="h3_class">local</h2>
+		<h2 id="h2_id2" class="h2_class">给dom添加css样式</h2>
+		<h2 id="h2_id3" class="h2_class">给dom添加子组件</h2>
+        <script type="text/javascript">
+            document.write('=============================<br/>')
+            // 通过标签获得元素内容
+            let text1=document.getElementsByTagName('h2')[0].innerText
+            let text2=document.getElementsByTagName('h2')['h2_id1'].innerText
+            let text3=document.getElementsByTagName('h2').h2_id1.innerText
+            document.write('通过元素标签获得元素内容：'+text1+'<br/>')
+            document.write('通过元素标签获得元素内容：'+text2+'<br/>')
+            document.write('通过元素标签获得元素内容：'+text3+'<br/>')
+            document.write('h2 h2_id1的id:'+document.getElementsByTagName('h2').h2_id1.id+'<br/>')
+            document.write('h2 节点:'+document.getElementsByTagName('h2')[0].nodeName+'<br/>')
+            // 为标签设置一个css样式
+            document.getElementsByTagName('h2')[0].style.color="rgb(12, 119, 212)"
+            // 为标签设置多个css样式
+            document.getElementsByTagName('h2')[1].style.cssText="color:red;font-size: 9px;"
+            document.getElementsByTagName('h2')[2].setAttribute("style","color: yellow;font-size: 200%")
+            document.write('=============================<br/>')
+            // 通过id获得元素内容
+            document.write('id是h3_id1 的id ： '+document.getElementById('h3_id1').id+'<br/>')
+            document.write('id是h3_id1 的 节点:'+document.getElementById('h3_id1').nodeName+'<br/>')
+            document.write('id是h3_id1 html内容:'+document.getElementById('h3_id1').innerHTML+'<br/>')
+            document.write('id是h3_id1 文本内容:'+document.getElementById('h3_id1').innerText+'<br/>')
+            document.write('=============================<br/>')
+            document.writeln('h3_class类元素的长度： '+document.getElementsByClassName('h3_class').length)
+            for (let index = 0; index < document.getElementsByClassName('h3_class').length; index++) {
+                document.writeln('h3_class的内容: '+ document.getElementsByClassName('h3_class')[index].innerText)
+                document.writeln('<br/>')
+            }
+		</script>
+</html>

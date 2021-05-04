@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html >
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>体验JavaScript语言</title>
+	</head>
+	<body>
+		<h1>体验JavaScript语言</h1>
+		<script type="text/javascript">
+            window.document.write("hello,world");
+            window.document.write("hello,world");
+            window.document.write("hello,world");
+            window.document.write("hello,world");
+            window.document.write("hello,world");
+            // 此处document.write 方法会使页面覆盖只有hello,world!!! 原因是文档已经加载完成
+            // 此时文档输出在加载完毕的页面上
+            setTimeout(function(){window.document.write("hello,world!!!");},5000)
+            // window.onload=function(){
+            //     alert(123)
+            //     window.document.write("onload ～～～")
+            // }
+		</script>
+</html>
